@@ -16,8 +16,7 @@ app.use(express.urlencoded({ extended: true }))
 app.options('*', cors());
 
 app.get('', async (req, res) => {
-    console.log(path.join(__dirname + '/../../SpotifyGuessHTML/index.html'));
-    res.sendFile(path.join(__dirname + '/../../SpotifyGuessHTML/index.html'));
+res.send('oi');
 })
 
 app.get('/search', async (req, res) => {
