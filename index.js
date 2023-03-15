@@ -33,7 +33,8 @@ app.get('/search', async (req, res) => {
             res.send(pdfBuffer)
         });
     } catch (e) {
-        res.send('error')
+        console.log(e)
+        res.send(e)
     }
 });
 
