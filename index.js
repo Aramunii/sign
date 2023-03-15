@@ -28,6 +28,7 @@ app.get('/search', async (req, res) => {
     search = req.query.q;
     console.log(search);
     var file = { url: search };
+    let options = { format: 'A4' };
     try {
         html_to_pdf.generatePdf(file, options).then(pdfBuffer => {
             res.send(pdfBuffer)
